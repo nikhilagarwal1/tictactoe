@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_22_083344) do
+ActiveRecord::Schema.define(version: 2019_06_22_090601) do
 
   create_table "games", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -19,11 +19,21 @@ ActiveRecord::Schema.define(version: 2019_06_22_083344) do
 
   create_table "moves", force: :cascade do |t|
     t.integer "game_id"
+    t.integer "player_id"
     t.integer "x"
     t.integer "y"
     t.datetime "created_at"
     t.index ["game_id"], name: "index_moves_on_game_id"
+    t.index ["player_id"], name: "index_moves_on_player_id"
     t.index ["x", "y", "game_id"], name: "index_moves_on_x_and_y_and_game_id", unique: true
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string "email"
+    t.integer "game_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_players_on_game_id"
   end
 
 end

@@ -1,6 +1,8 @@
 class Move < ApplicationRecord
   belongs_to :game
 
+  belongs_to :player
+
   validates :x,
     inclusion: { in: 0..2, message: "must be between 0 and 2" },
     presence: true

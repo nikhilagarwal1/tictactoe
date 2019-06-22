@@ -5,7 +5,8 @@ class GamesController < ApplicationController
     game = Game.find_by(id: params[:id])
 
     render json: game, :include => [
-      :moves => { :except => :game_id }
+      :moves => { :except => :game_id },
+      :players => { :except => :game_id }
     ]
   end
 
@@ -18,7 +19,7 @@ class GamesController < ApplicationController
 
   def update
     game = Game.find_by(id: params[:id])
-    new_move = Move.new(x: params[:x], y: params[:y], game_id: game.id)
+    new_move = Move.new(x: params[:x], y: params[:y], game_id: game.id, player_id: params[:player_id])
 
     begin
       new_move.save
