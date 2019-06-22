@@ -1,0 +1,1299 @@
+Started GET "/" for ::1 at 2019-06-22 13:34:36 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateGames (20190622080849)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "games" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190622080849_create_games.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190622080849"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-22 08:10:31.874330"], ["updated_at", "2019-06-22 08:10:31.874330"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateMoves (20190622081306)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateMoves (20190622081350)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190622081350_create_moves.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "moves" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "game_id" integer, "x" integer, "y" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190622081350_create_moves.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190622081350"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+Started GET "/" for ::1 at 2019-06-22 13:44:46 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 86ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "games"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves"[0m
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2019-06-22 13:45:17 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/games" for ::1 at 2019-06-22 13:45:30 +0530
+Processing by GamesController#create as */*
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:13
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-06-22 08:15:30.399101"], ["updated_at", "2019-06-22 08:15:30.399101"]]
+  ↳ app/controllers/games_controller.rb:13
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:14
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 2.1ms)
+
+
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/games/1" for ::1 at 2019-06-22 13:46:13 +0530
+Processing by GamesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/controllers/games_controller.rb:7
+Completed 200 OK in 22ms (Views: 10.6ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/games/1?x=0&y=0" for ::1 at 2019-06-22 13:49:15 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"0", "id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["game_id", 1], ["x", 0], ["y", 0], ["created_at", "2019-06-22 08:19:15.703740"], ["updated_at", "2019-06-22 08:19:15.703740"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 26ms (Views: 0.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/games/1" for ::1 at 2019-06-22 13:49:30 +0530
+Processing by GamesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/controllers/games_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/games/1?x=0&y=4" for ::1 at 2019-06-22 13:50:28 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"4", "id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:15
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/games/1?x=0&y=0" for ::1 at 2019-06-22 13:51:24 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"0", "id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["game_id", 1], ["x", 0], ["y", 0], ["created_at", "2019-06-22 08:21:24.150400"], ["updated_at", "2019-06-22 08:21:24.150400"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/sdas" for ::1 at 2019-06-22 13:52:23 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/sdas"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateMoves (20190622083344)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190622083344_create_moves.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "moves" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "game_id" integer, "x" integer, "y" integer, "created_at" datetime)[0m
+  ↳ db/migrate/20190622083344_create_moves.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateMoves (20190622083344)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190622083344_create_moves.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "moves" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "game_id" integer, "x" integer, "y" integer, "created_at" datetime)[0m
+  ↳ db/migrate/20190622083344_create_moves.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "games"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "games" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "moves"[0m
+  ↳ db/schema.rb:20
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "moves" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "game_id" integer, "x" integer, "y" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:20
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190622081350)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190622080849);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-22 08:34:58.275643"], ["updated_at", "2019-06-22 08:34:58.275643"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "games"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "games" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "moves"[0m
+  ↳ db/schema.rb:20
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "moves" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "game_id" integer, "x" integer, "y" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:20
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190622081350)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190622080849);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-22 08:34:58.291733"], ["updated_at", "2019-06-22 08:34:58.291733"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-06-22 08:34:58.294702"], ["key", "environment"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateMoves (20190622083344)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190622083344_create_moves.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "moves" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "game_id" integer, "x" integer, "y" integer, "created_at" datetime)[0m
+  ↳ db/migrate/20190622083344_create_moves.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "games"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "games" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "moves"[0m
+  ↳ db/schema.rb:20
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "moves" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "game_id" integer, "x" integer, "y" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:20
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190622081350)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190622080849);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (2.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-22 08:35:09.050703"], ["updated_at", "2019-06-22 08:35:09.050703"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "games"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "games" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "moves"[0m
+  ↳ db/schema.rb:20
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "moves" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "game_id" integer, "x" integer, "y" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:20
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190622081350)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190622080849);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-22 08:35:09.066595"], ["updated_at", "2019-06-22 08:35:09.066595"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-06-22 08:35:09.069692"], ["key", "environment"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT  "moves".* FROM "moves" ORDER BY "moves"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/games" for ::1 at 2019-06-22 14:05:45 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateMoves (20190622083344)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190622083344_create_moves.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "moves" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "game_id" integer, "x" integer, "y" integer, "created_at" datetime)[0m
+  ↳ db/migrate/20190622083344_create_moves.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateGames (20190622080849)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "games" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190622080849_create_games.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190622080849"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateMoves (20190622083344)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "moves" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "game_id" integer, "x" integer, "y" integer, "created_at" datetime)[0m
+  ↳ db/migrate/20190622083344_create_moves.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_moves_on_game_id" ON "moves" ("game_id")[0m
+  ↳ db/migrate/20190622083344_create_moves.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_moves_on_x_and_y_and_game_id" ON "moves" ("x", "y", "game_id")[0m
+  ↳ db/migrate/20190622083344_create_moves.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190622083344"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-22 08:37:04.164664"], ["updated_at", "2019-06-22 08:37:04.164664"]]
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT  "moves".* FROM "moves" ORDER BY "moves"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT  "moves".* FROM "moves" ORDER BY "moves"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT  "moves".* FROM "moves" ORDER BY "moves"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/games" for ::1 at 2019-06-22 14:07:39 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Nikhilagarwal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GamesController#create as */*
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:13
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-06-22 08:37:39.083937"], ["updated_at", "2019-06-22 08:37:39.083937"]]
+  ↳ app/controllers/games_controller.rb:13
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:14
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/games/1" for ::1 at 2019-06-22 14:07:43 +0530
+Processing by GamesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/controllers/games_controller.rb:7
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/games/1?x=0&y=0" for ::1 at 2019-06-22 14:07:49 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"0", "id"=>"1"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Create (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 1], ["x", 0], ["y", 0], ["created_at", "2019-06-22 08:37:49.381482"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/games/1?x=0&y=0" for ::1 at 2019-06-22 14:07:50 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"0", "id"=>"1"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Create (1.0ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 1], ["x", 0], ["y", 0], ["created_at", "2019-06-22 08:37:50.719815"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/games/1" for ::1 at 2019-06-22 14:07:56 +0530
+Processing by GamesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/controllers/games_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/1" for ::1 at 2019-06-22 14:08:26 +0530
+Processing by GamesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/controllers/games_controller.rb:7
+Completed 200 OK in 17ms (Views: 8.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/games/1" for ::1 at 2019-06-22 14:08:29 +0530
+Processing by GamesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/controllers/games_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/1" for ::1 at 2019-06-22 14:08:30 +0530
+Processing by GamesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/controllers/games_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/games/1?x=0&y=0" for ::1 at 2019-06-22 14:08:32 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"0", "id"=>"1"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.0ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 1], ["x", 0], ["y", 0], ["created_at", "2019-06-22 08:38:32.476311"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/games/1?x=0&y=4" for ::1 at 2019-06-22 14:08:51 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"4", "id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:15
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/games/1?x=0&y=3" for ::1 at 2019-06-22 14:08:53 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"3", "id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.0ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:15
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/games/1?x=0&y=2" for ::1 at 2019-06-22 14:08:57 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"2", "id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 1], ["x", 0], ["y", 2], ["created_at", "2019-06-22 08:38:57.980328"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/games/1" for ::1 at 2019-06-22 14:09:01 +0530
+Processing by GamesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/controllers/games_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT  "moves".* FROM "moves" WHERE "moves"."game_id" = ? LIMIT ?[0m  [["game_id", 1], ["LIMIT", 11]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+Started PATCH "/games/1?x=0&y=1" for ::1 at 2019-06-22 14:13:15 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"1", "id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 1], ["x", 0], ["y", 1], ["created_at", "2019-06-22 08:43:15.372093"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+Started PATCH "/games/1?x=1&y=1" for ::1 at 2019-06-22 14:14:34 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"1", "y"=>"1", "id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 1], ["x", 1], ["y", 1], ["created_at", "2019-06-22 08:44:34.368440"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+Started PATCH "/games/1?x=1&y=2" for ::1 at 2019-06-22 14:15:03 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"1", "y"=>"2", "id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 1], ["x", 1], ["y", 2], ["created_at", "2019-06-22 08:45:03.727218"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+Started PATCH "/games/1?x=1&y=0" for ::1 at 2019-06-22 14:17:54 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"1", "y"=>"0", "id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 1], ["x", 1], ["y", 0], ["created_at", "2019-06-22 08:47:54.513780"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/games/1?x=2&y=0" for ::1 at 2019-06-22 14:17:58 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"2", "y"=>"0", "id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 1], ["x", 2], ["y", 0], ["created_at", "2019-06-22 08:47:58.451054"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+Started PATCH "/games/1?x=2&y=1" for ::1 at 2019-06-22 14:18:38 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"2", "y"=>"1", "id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 1], ["x", 2], ["y", 1], ["created_at", "2019-06-22 08:48:38.106735"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+Started PATCH "/games/1?x=2&y=2" for ::1 at 2019-06-22 14:18:49 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"2", "y"=>"2", "id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 1], ["x", 2], ["y", 2], ["created_at", "2019-06-22 08:48:49.472212"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+Started POST "/games" for ::1 at 2019-06-22 14:19:21 +0530
+Processing by GamesController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:13
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-06-22 08:49:21.382396"], ["updated_at", "2019-06-22 08:49:21.382396"]]
+  ↳ app/controllers/games_controller.rb:13
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:14
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/games/1" for ::1 at 2019-06-22 14:19:25 +0530
+Processing by GamesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/controllers/games_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/2" for ::1 at 2019-06-22 14:19:27 +0530
+Processing by GamesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/games_controller.rb:7
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/games/2?x=0&y=2" for ::1 at 2019-06-22 14:19:38 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"2", "id"=>"2"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.0ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 2], ["x", 0], ["y", 2], ["created_at", "2019-06-22 08:49:38.522902"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+Started PATCH "/games/2?x=0&y=0" for ::1 at 2019-06-22 14:19:58 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"0", "id"=>"2"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 2], ["x", 0], ["y", 0], ["created_at", "2019-06-22 08:49:58.488792"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+Started PATCH "/games/2?x=1&y=2" for ::1 at 2019-06-22 14:20:10 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"1", "y"=>"2", "id"=>"2"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 2], ["x", 1], ["y", 2], ["created_at", "2019-06-22 08:50:10.568266"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+Started PATCH "/games/2?x=0&y=2" for ::1 at 2019-06-22 14:20:19 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"2", "id"=>"2"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 2], ["x", 0], ["y", 2], ["created_at", "2019-06-22 08:50:19.747809"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/games/2?x=1&y=0" for ::1 at 2019-06-22 14:20:29 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"1", "y"=>"0", "id"=>"2"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 2], ["x", 1], ["y", 0], ["created_at", "2019-06-22 08:50:29.856693"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+Started PATCH "/games/2?x=2&y=2" for ::1 at 2019-06-22 14:20:40 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"2", "y"=>"2", "id"=>"2"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 2], ["x", 2], ["y", 2], ["created_at", "2019-06-22 08:50:40.075850"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+Started POST "/games" for ::1 at 2019-06-22 14:22:15 +0530
+Processing by GamesController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:13
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-06-22 08:52:15.176624"], ["updated_at", "2019-06-22 08:52:15.176624"]]
+  ↳ app/controllers/games_controller.rb:13
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:14
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/games/2" for ::1 at 2019-06-22 14:22:21 +0530
+Processing by GamesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/games_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/3" for ::1 at 2019-06-22 14:22:24 +0530
+Processing by GamesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/games/3?x=0&y=0" for ::1 at 2019-06-22 14:23:23 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"0", "id"=>"3"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.0ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 3], ["x", 0], ["y", 0], ["created_at", "2019-06-22 08:53:23.698320"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+Started PATCH "/games/3?x=0&y=2" for ::1 at 2019-06-22 14:23:38 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"2", "id"=>"3"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.0ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 3], ["x", 0], ["y", 2], ["created_at", "2019-06-22 08:53:38.006127"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+Started GET "/games/3" for ::1 at 2019-06-22 14:23:48 +0530
+Processing by GamesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/games/3?x=1&y=0" for ::1 at 2019-06-22 14:24:04 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"1", "y"=>"0", "id"=>"3"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.0ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 3], ["x", 1], ["y", 0], ["created_at", "2019-06-22 08:54:04.281256"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+Started PATCH "/games/3?x=1&y=2" for ::1 at 2019-06-22 14:24:19 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"1", "y"=>"2", "id"=>"3"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.5ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 3], ["x", 1], ["y", 2], ["created_at", "2019-06-22 08:54:19.478356"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.7ms)
+
+
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+Started PATCH "/games/3?x=2&y=0" for ::1 at 2019-06-22 14:24:34 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"2", "y"=>"0", "id"=>"3"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.4ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 3], ["x", 2], ["y", 0], ["created_at", "2019-06-22 08:54:34.930007"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.2ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+Started PATCH "/games/3?x=2&y=0" for ::1 at 2019-06-22 14:24:50 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"2", "y"=>"0", "id"=>"3"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/games" for ::1 at 2019-06-22 14:25:03 +0530
+Processing by GamesController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:13
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-06-22 08:55:03.216172"], ["updated_at", "2019-06-22 08:55:03.216172"]]
+  ↳ app/controllers/games_controller.rb:13
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:14
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/games/4?x=0&y=0" for ::1 at 2019-06-22 14:25:09 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"0", "id"=>"4"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (0.3ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 4], ["x", 0], ["y", 0], ["created_at", "2019-06-22 08:55:09.453659"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/games/4?x=0&y=0" for ::1 at 2019-06-22 14:25:13 +0530
+Processing by GamesController#update as */*
+  Parameters: {"x"=>"0", "y"=>"0", "id"=>"4"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mMove Load (0.1ms)[0m  [1m[34mSELECT "moves".* FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/models/game.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "moves" WHERE "moves"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/models/game.rb:15
+  [1m[36mMove Create (2.5ms)[0m  [1m[32mINSERT INTO "moves" ("game_id", "x", "y", "created_at") VALUES (?, ?, ?, ?)[0m  [["game_id", 4], ["x", 0], ["y", 0], ["created_at", "2019-06-22 08:55:13.168096"]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 3.0ms)
+
+
